@@ -2,7 +2,7 @@
 
 ## Usage
 
-Links like [`https://ghutches.github.io/redirect-url/index.html?url=sapgui:-command=IW32`](https://ghutches.github.io/redirect-url/index.html?url=https://www.google.com) will open the url in the url search parameter.
+Links like [`https://ghutches.github.io/redirect-url/index.html?url=sapgui:-command=IW32`](https://ghutches.github.io/redirect-url/index.html?url=sapgui:-command=IW32) will open the url in the url search parameter.
 
 For more about the 'sapgui:' protocol: [`https://github.com/GHutches/sapgui-url-protocol`](https://github.com/GHutches/sapgui-url-protocol)
 
