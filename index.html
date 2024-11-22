@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script>
+      window.onload = function(){
+        const url = new URL(window.location.href)
+        var text;
+        if(url.searchParams.has("url")){
+          url_text = url.searchParams.get("url")
+          bodyText = "Redirecting you to: " + url_text
+          var success;
+          try {
+            window.location.replace(url_text);
+            success = true
+          } catch (e) {
+            try {
+              window.location.href = url_text;
+              success = true
+            } catch (e) {
+              bodyText = "Failed to redirect. Copy the url manually: " + url_text
+              success = false
+            }
+          }
+        } else {
+          bodyText = "No \"url\" parameter applied to URL."
+          success = false
+        }
+        
+        const textnode = document.createTextNode(bodyText);
+        document.body.appendChild(textnode);
+
+        if(success){
+          setTimeout(function() {
+            window.close()
+          }, 5000);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
